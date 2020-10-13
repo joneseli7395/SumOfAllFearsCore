@@ -1,2 +1,3 @@
-# SumOfAllFearsCore
- SOAF Challenge written in C#
+# Sum Of All Fears...but written in C#
+
+Check out my [portfolio](https://www.ejdevspot.com/)
