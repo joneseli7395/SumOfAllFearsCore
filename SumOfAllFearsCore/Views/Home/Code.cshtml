@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Code";
+}
+
+<div class="row">
+    <div class="col text-center">
+        <h1>The Code</h1>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col text-center">
+        <h4>The following code is displayed using PrismJS</h4>
+    </div>
+</div>
+<hr />
+<br />
+
+<div class="row">
+    <div class="col">
+        <pre>
+<code class="language-js line-numbers">[HttpPost]
+    public IActionResult Solve(int input1, int input2, int input3, int input4, int input5, int kValue)
+    {
+        int[] inArray = new int[] { input1, input2, input3, input4, input5 };
+        var output = "";
+        for(int i = 0; i < inArray.Length; i++)
+        {
+            for(int s = i + 1; s < inArray.Length; s++ )
+            {
+                if(inArray[i] + inArray[s] == kValue)
+                {
+                    output += "Success!";
+                    break;
+                }
+            }
+        }
+
+        if(output != "")
+        {
+            ViewData["Output"] = output;
+        }
+        else
+        {
+            ViewData["Output"] = "No solution. Try Again!";
+        }
+        return View();
+    }
+
+</code>
+</pre>
+
+    </div>
+</div>
